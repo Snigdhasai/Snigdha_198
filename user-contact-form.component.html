@@ -1,0 +1,79 @@
+<!-- <p>user-contact-from works!</p> -->
+
+<form [formGroup]="contactForm" class="form-group"  (ngSubmit)="SubmitData()">
+    
+    <fieldset>
+        <legend>Contact Form</legend>
+        <div formGroupName="cForm" novalidate></div>
+<div>      
+<label id="fname" class="form-group" >Enter FirstName:</label>
+<input type="text" size="30"  formControlName="firstname"  name="finame" id="finame"/>
+<div *ngIf="contactForm.firstname.touched && contactForm.firstname.invalid">
+    <div *ngIf="contactForm.firstname.required">FirstName is required</div>
+    <div *ngIf="contactForm.errors.minLength">FirstName must be min of 5 characters</div>
+</div>
+</div>  
+<br/>
+<br/>
+
+<label class="form-group" >Enter LastName:</label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="text" size="30" formControlName="lastname" name="finame" id="finame"/>
+<br/>
+<br/>
+
+<label class="form-group" >Enter Gender:</label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="text" size="30" formControlName="gender" name="finame" id="finame"/>
+<br/>
+<br/>
+
+<label class="form-group" >Enter MobileNumber:</label>&nbsp;&nbsp;
+<input type="number"  formControlName="mobileno" name="finame" id="finame"/>
+<br/>
+<br/>
+
+<label class="form-group" >Enter Email:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="email" size="30" formControlName="email" name="finame" id="finame"/>
+<br/>
+<br/>
+
+<label class="form-group">Enter Marital Status:</label>&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="text" size="30" formControlName="ismarried" name="finame" id="finame"/>
+<br/>
+<br/>
+
+<label class="form-group" >Enter Country:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="text" size="30"  formControlName="country" name="finame" id="finame"/>
+<br/>
+<br/>
+
+<input type="submit" class="btn btn-primary" name="ab" value="Submit Contact Details"/>
+<br/>
+<br/>
+<select formControlName="country">
+    <option *ngFor="let country of countries" [value]="country">{{country}}</option>
+</select>
+
+<!-- <label class="form-group">Enter Country: &nbsp;</label>
+    <input type="text" class="form-control-sm" formControlName="country" id="finame" name="finame"/>
+    <br/><br/> -->
+
+    
+<select formControlName="requestType">
+    <option *ngFor="let requestType of requestTypes" [value]="requestType">{{requestType}}</option>
+</select>
+<input formControlName="text"/>
+<button type="submit" (click)="onSubmit()" [disabled]="contactForm.pristine">Save</button>
+<button type="reset" (click)="revert()" [disabled]="contactForm.pristine">
+
+</button>
+<!-- <input type="submit" class="btn btn-primary" name="st" />   
+   -->
+
+</fieldset>
+</form>
+
+
+<!-- <label class="form-group" >Enter Gender:</label>
+<input type="text" class="form-control form-control-sm" formControlName="gender" name="finame" id="finame"/>
+<br/> -->
+

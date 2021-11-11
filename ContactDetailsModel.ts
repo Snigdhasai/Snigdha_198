@@ -1,3 +1,10 @@
+export class ContactRequest
+{
+  cForm:any=ContactDetails;
+    requestType:any="";
+    text:string="";   
+}
+
 export class ContactDetails
 {
     firstname:string="";
@@ -8,3 +15,4 @@ export class ContactDetails
     country:string="";
     ismarried:string="";
 }
+
