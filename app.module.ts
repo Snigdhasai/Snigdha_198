@@ -5,7 +5,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { UserLoginComponent } from './user-login/user-login.component';
 import { ProductsComponent } from './products/products.component';
-import { UserContactFromComponent } from './user-contact-from/user-contact-from.component';
+import { UserContactFromComponent } from './user-contact-form/user-contact-form.component';
 @NgModule({
   declarations: [
     AppComponent,
