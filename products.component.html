@@ -1,0 +1,14 @@
+<p>products works!</p>
+
+<form #productform="ngForm" (ngSubmit)="ValidateProduct(productform.value)">
+    <label>Enter Product ID</label>
+    <input type="text" [(ngModel)]="prod.prodID" id="pid" name="pid"/>
+    <br/>
+    <label>Enter Product Name</label>
+    <input type="text" [(ngModel)]="prod.prodName" id="pname" name="pname"/>
+    <br/>
+    <label>Enter Product Quantity</label>
+    <input type="text" [(ngModel)]="prod.Quantity" id="pquantity" name="pquantity"/>
+    <br/>
+    <input type="submit" name="vu"/>
+</form>
