@@ -1,20 +1,24 @@
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { UserLoginComponent } from './user-login/user-login.component';
-
+import { ProductsComponent } from './products/products.component';
+import { UserContactFromComponent } from './user-contact-from/user-contact-from.component';
 @NgModule({
   declarations: [
     AppComponent,
-    UserLoginComponent
+    UserLoginComponent,
+    ProductsComponent,
+    UserContactFromComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
-  bootstrap: [UserLoginComponent]
+  bootstrap: [UserContactFromComponent]
 })
 export class AppModule { }

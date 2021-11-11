@@ -1,0 +1,49 @@
+<!-- <p>user-contact-from works!</p> -->
+
+<form [formGroup]="contactForm" class="form-group"  (ngSubmit)="SubmitData()">
+    <fieldset>
+        <legend>Contact Form</legend>
+<label id="fname" class="form-group" >Enter FirstName:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="text" size="30" formControlName="firstname"  name="finame" id="finame"/>
+<br/>
+<br/>
+
+<label class="form-group" >Enter LastName:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="text" size="30" formControlName="lastname" name="finame" id="finame"/>
+<br/>
+<br/>
+
+<label class="form-group" >Enter Gender:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="text" size="30" formControlName="gender" name="finame" id="finame"/>
+<br/>
+<br/>
+
+<label class="form-group" >Enter MobileNumber:</label>&nbsp;&nbsp;
+<input type="number"  formControlName="mobileno" name="finame" id="finame"/>
+<br/>
+<br/>
+
+<label class="form-group" >Enter Email:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="email" size="30" formControlName="email" name="finame" id="finame"/>
+<br/>
+<br/>
+
+<label class="form-group">Enter Marital Status:</label>&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="text" size="30" formControlName="ismarried" name="finame" id="finame"/>
+<br/>
+<br/>
+
+<label class="form-group" >Enter Country:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="text" size="30"  formControlName="country" name="finame" id="finame"/>
+<br/>
+<br/>
+
+<input type="submit" class="btn btn-primary" name="ab" value="Submit Contact Details"/>
+
+</fieldset>
+</form>
+
+
+<!-- <label class="form-group" >Enter Gender:</label>
+<input type="text" class="form-control form-control-sm" formControlName="gender" name="finame" id="finame"/>
+<br/> -->
