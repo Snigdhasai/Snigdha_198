@@ -1,0 +1,23 @@
+<!-- <p>parent works!</p> -->
+
+<table>
+    <tr>
+        <td>Product Id</td>&nbsp;
+        <td>Brand</td>&nbsp;
+        <td>Price</td>
+    </tr>
+
+    <tr *ngFor="let p of productinparent; let i=index">
+        <td>{{p.ProductId}}</td>
+        <td>{{p.Brand}}</td>
+        <td>{{p.Price}}</td>
+    </tr>
+
+    <tr>
+       <!-- <td>{{p1.ProductId}}</td> -->
+       <!-- <td>{{p1[0].Brand}}</td> -->
+    </tr>
+</table>
+
+<hr/>
+<app-child></app-child>
